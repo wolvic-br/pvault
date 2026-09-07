@@ -2,7 +2,7 @@
 // verdade. Como o PassVault é 100% local (sem chamadas de rede além de
 // carregar os próprios arquivos), isso é só "cache tudo, sempre".
 
-const CACHE_NAME = "passvault-v1";
+const CACHE_NAME = "passvault-v2"; // v2: corrige o <script> de icons.js que faltava
 const FILES_TO_CACHE = [
   "./",
   "./index.html",
