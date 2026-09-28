@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+build/
+dist/
+*.spec
+.venv/
+venv/
+# Cofres reais nunca devem ir para o repositório.
+# (O cofre de teste em desktop/exemplos/ está liberado explicitamente.)
+*.db
+*.pvault
+!desktop/exemplos/*.db

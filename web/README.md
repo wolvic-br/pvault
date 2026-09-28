@@ -23,7 +23,7 @@ rápido, sem precisar configurar servidor nenhum:
 
 ### Opção mais rápida: Netlify Drop
 1. Abra https://app.netlify.com/drop no navegador do Mac.
-2. Arraste a pasta `site/` inteira (a que tem o `index.html` dentro)
+2. Arraste a pasta `web/` inteira (a que tem o `index.html` dentro)
    para a página.
 3. Em alguns segundos, você recebe um link `https://algumnome.netlify.app`.
 4. Abra esse link no Safari do iPhone.
@@ -32,7 +32,7 @@ Não precisa criar conta pra isso funcionar (embora criar uma conta grátis
 deixe o link fixo, em vez de aleatório).
 
 ### Alternativa: GitHub Pages
-Se preferir algo mais permanente e sob seu controle, suba a pasta `site/`
+Se preferir algo mais permanente e sob seu controle, suba a pasta `web/`
 para um repositório no GitHub e ative o GitHub Pages nas configurações do
 repositório (Settings → Pages). Também sai com HTTPS de graça.
 
@@ -70,7 +70,7 @@ repositório (Settings → Pages). Também sai com HTTPS de graça.
 ## Estrutura dos arquivos
 
 ```
-site/
+web/
 ├── index.html          (tela principal)
 ├── manifest.webmanifest (metadados de instalação do PWA)
 ├── sw.js                (service worker — cache offline)
