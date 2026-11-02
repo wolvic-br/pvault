@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Lines of Battle: Greco-Roman Warfare</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="side rome">
+      <div class="name">ROMA <span id="vp-rome">0</span></div>
+      <div class="bar"><i id="bar-rome"></i></div>
+      <div class="sub" id="pts-rome"></div>
+    </div>
+    <div class="center">
+      <div class="title">LINES OF BATTLE</div>
+      <div class="clock"><span id="clock">00:00</span> <span id="speed">1×</span><span id="paused" hidden> · PAUSADO</span></div>
+      <div class="buttons">
+        <button id="btn-pause" title="Pausar (Espaço)">‖</button>
+        <button id="btn-speed" title="Velocidade (1/2/3)">»</button>
+        <button id="btn-help" title="H">?</button>
+      </div>
+    </div>
+    <div class="side greece">
+      <div class="name"><span id="vp-greece">0</span> GRÉCIA</div>
+      <div class="bar"><i id="bar-greece"></i></div>
+      <div class="sub" id="pts-greece"></div>
+    </div>
+  </header>
+
+  <main class="stage">
+    <canvas id="battlefield"></canvas>
+    <div id="log" class="log"></div>
+    <div id="overlay" class="overlay" hidden>
+      <div class="card"><h1 id="overlay-title"></h1><p id="overlay-text"></p></div>
+    </div>
+    <div id="help" class="help" hidden>
+      <div class="card">
+        <button id="btn-close-help" class="close">×</button>
+        <h2>Como jogar</h2>
+        <ul>
+          <li><b>Desenhe linhas:</b> pressione sobre uma unidade sua e arraste — a seleção segue a linha em formação. <kbd>Shift</kbd> encadeia na rota atual.</li>
+          <li><b>Selecionar:</b> clique ou arraste uma caixa no vazio. <kbd>A</kbd> todos · <kbd>T</kbd> terrestres · <kbd>N</kbd> navais.</li>
+          <li><b>Botão direito:</b> linha reta até o ponto. <kbd>S</kbd> para. <kbd>Esc</kbd> limpa seleção.</li>
+          <li><b>Pontos de controle:</b> fique dentro da área para encher a barra de domínio. Cada ponto dá +1 ponto de vitória/s. Primeiro a <b>600</b> vence.</li>
+          <li><b>Mar:</b> só navios entram. Triremes <b>abalroam</b>: mais velocidade e impacto de través (90°) = mais dano.</li>
+          <li><kbd>Espaço</kbd> pausa · <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> velocidade · <kbd>R</kbd> reinicia · <kbd>H</kbd> ajuda.</li>
+        </ul>
+        <h2>Unidades</h2>
+        <div id="legend"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bottombar">
+    <div id="selection" class="selection"></div>
+    <div id="reinf" class="reinf"></div>
+  </footer>
+
+  <!-- ordem importa: core → entities → assets → maps → systems → game → ui → main -->
+  <script src="src/core/namespace.js"></script>
+  <script src="src/core/math.js"></script>
+  <script src="src/core/spatialHash.js"></script>
+  <script src="src/core/terrain.js"></script>
+  <script src="src/core/loop.js"></script>
+  <script src="src/entities/unitTypes.js"></script>
+  <script src="src/entities/unit.js"></script>
+  <script src="src/assets/icons.js"></script>
+  <script src="src/maps/aegean.js"></script>
+  <script src="src/systems/pathing.js"></script>
+  <script src="src/systems/movement.js"></script>
+  <script src="src/systems/combat.js"></script>
+  <script src="src/systems/capture.js"></script>
+  <script src="src/systems/reinforcements.js"></script>
+  <script src="src/systems/ai.js"></script>
+  <script src="src/game.js"></script>
+  <script src="src/core/renderer.js"></script>
+  <script src="src/core/input.js"></script>
+  <script src="src/ui/hud.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
